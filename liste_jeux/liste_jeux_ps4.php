@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barre de navigation</title>
+    <title>Liste de jeux PS4</title>
     <link href="../style.liste_jeux.css" rel="stylesheet">
 </head>
 <body>
@@ -15,6 +15,7 @@
     <a href="#one-serie">SERIES S/X</a>
     <a href="#switch">SWITCH</a>
     <a href="#pc">PC</a>
+    <a href="#accueil">ACCUEIL</a>
 </div>
 
 <section>
@@ -43,7 +44,7 @@
     }
 
 ?>  
-      
+
 </section>
 
     
