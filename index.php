@@ -9,12 +9,12 @@
 <body>
 
 <div class="navbar">
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_ps4.php">PS4</a>
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_ps5.php">PS5</a>
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_xbox_one.php">XBOX ONE</a>
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_series_s_x.php">SERIES S/X</a>
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_switch.php">SWITCH</a>
-    <a href="/dvauzelle/mini_projet_yannick_david/liste_jeux/liste_jeux_pc.php">PC</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_ps4.php">PS4</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_ps5.php">PS5</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_xbox_one.php">XBOX ONE</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_series_s_x.php">SERIES S/X</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_switch.php">SWITCH</a>
+    <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_pc.php">PC</a>
     <a id="accueil">ACCUEIL</a>
 </div>
 
