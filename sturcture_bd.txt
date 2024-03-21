@@ -1,0 +1,20 @@
+BDD :
+Tables :
+
+plateforme
+
+	id
+	nom
+
+jeu
+
+	id
+	nom
+	plateforme
+	annee
+	image
+	video
+	description
+	note
+	avis?
+	id_plateforme
