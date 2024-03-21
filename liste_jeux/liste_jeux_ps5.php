@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste de jeux PS4</title>
+    <title>Liste de jeux PS5</title>
     <link href="../style.liste_jeux.css" rel="stylesheet">
 </head>
 <body>
