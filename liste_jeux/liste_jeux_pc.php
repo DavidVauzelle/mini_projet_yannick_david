@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="navbar">
+<nav>
     <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_ps4.php">PS4</a>
     <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_ps5.php">PS5</a>
     <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_xbox_one.php">XBOX ONE</a>
@@ -16,7 +16,7 @@
     <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_switch.php">SWITCH</a>
     <a href="/mini_projet_yannick_david/liste_jeux/liste_jeux_pc.php">PC</a>
     <a href="../index.php">ACCUEIL</a>
-</div>
+</nav>
 
 <section>
     <h2>Liste de jeux PC :</h2>
