@@ -28,7 +28,8 @@
         FROM jeux
         INNER JOIN plateforme
         ON jeux.id_plateforme = plateforme.id_plateforme
-        where plateforme.id_plateforme = 3;
+        where plateforme.id_plateforme = 3
+        ORDER BY jeux.nom ASC;
         ";
     $resultat = mysqli_query($connexion, $sql);
 
