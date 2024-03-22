@@ -24,28 +24,29 @@
 <?php
     include '../connexion_bdd.php';
 
-    $sql = " SELECT jeux.nom
+    // Vérifier si l'ID est présent dans l'URL
+    if (isset($_GET['id_jeux']) && !empty($_GET['id_jeux'])) {
+
+    // Récupérer et échapper l'ID pour éviter les injections SQL
+    $id = mysqli_real_escape_string($connexion, $_GET['id_jeux']);
+
+    $sql = " SELECT jeux.nom, jeux.jeux_nom
         FROM jeux
         INNER JOIN plateforme
         ON jeux.id_plateforme = plateforme.id_plateforme
-        where plateforme.id_plateforme = 1
+        where plateforme.id_plateforme = 1 AND jeux.id_jeux = '$id' 
         ORDER BY jeux.nom ASC;
         ";
     $resultat = mysqli_query($connexion, $sql);
 
-    if ($resultat) {
+    if ($resultat && mysqli_num_rows($resultat) > 0) {
+        while ($jeux = mysqli_fetch_assoc($resultat)) {
         '<ul>';
-        foreach($resultat as $jeux) { 
-            echo '<li>' . $jeux['nom'] . '</li>'. '<br>';
-        } 
+            echo '<li>' . '<a href="../fiche_jeux/fiche_jeux_ps4?id_jeux=' . $jeux['jeux.id_jeux'] . '">' . $jeux['nom'] . '</a>' . '<br>' . '</li>' . '<br>';
         '</ul>';
-         
-    } else {
-             echo "Aucun jeu trouvé : " . mysqli_error($connexion); 
+            }
+        }
     }
-
 ?>  
 
 </section>
-
-    

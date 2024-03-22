@@ -1,0 +1,53 @@
+<section>
+    <article>
+        <h2>Liste de jeux PS4 :</h2>
+
+    <?php
+    include '../connexion_bdd.php';
+
+    // Récupérer l'id du jeu dans l'URL
+
+    // Vérifier si l'ID est présent dans l'URL
+    if (isset($_GET['id_jeux']) && !empty($_GET['jeux.id_jeux'])) {
+    // Récupérer et échapper l'ID pour éviter les injections SQL
+    $id = mysqli_real_escape_string($connexion, $_GET['id_jeux']);
+    
+    $sql = "SELECT jeux.nom, jeux.image, jeux.annee, jeux.note, jeux.description, jeux.video
+        FROM jeux
+        INNER JOIN plateforme
+        ON jeux.id_plateforme = plateforme.id_plateforme
+        where plateforme.id_plateforme = 1 and $id_jeux = 'id'
+        ORDER BY jeux.nom ASC";
+        
+    $resultat = mysqli_query($connexion, $sql);
+
+    if ($resultat && mysqli_num_rows($resultat) > 0) {
+        $jeux = mysqli_fetch_assoc($resultat);
+        //if ($resultat) {
+            foreach($resultat as $jeux) { 
+                echo 
+                '<a href="' . $jeux['id_jeux'] . '</a>' . '<br>' . 
+                '<img class="jaquette"  src="' . $jeux["image"] . '">' . '<br>' .
+                'Année de sortie : ' . $jeux['annee'] . '<br>' . 
+                'Note metacritic : ' . $jeux['note'] . '<br>' . 
+                'Description : ' . $jeux['description'] . '<br>' . '<br>';
+
+                // Vérification si la vidéo existe
+                if (!empty($jeux['video'])) {
+                    // Affichage de l'iframe YouTube avec l'URL de la vidéo
+                        echo '<iframe width="560" height="315" src="' . $jeux['video'] . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+                }
+            }  
+    
+    /*} else {
+             echo "Aucun jeu trouvé : " . mysqli_error($connexion); 
+    }
+    } else {
+        echo "Aucun résultat trouvé pour cet ID.";
+    }
+    } else {
+        echo "Aucun ID n'a été spécifié dans l'URL.";
+    }
+?>
+    </article>
+</section>

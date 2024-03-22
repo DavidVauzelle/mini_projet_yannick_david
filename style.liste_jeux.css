@@ -25,10 +25,24 @@ nav a:hover {
     color: black;
 }
 
-section {
+/*section {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.jaquette {
+    height: 450px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
 }
